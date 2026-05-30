@@ -11,7 +11,7 @@ Go to the [latest release](https://github.com/emrecetintas/kioku-releases/releas
 | Platform | File | Type |
 |----------|------|------|
 | **Windows** | `Kioku-x.x.x-x64.exe` | Installer |
-| **macOS** | `Kioku-x.x.x-arm64.dmg` | Disk image |
+| **macOS** (Apple Silicon) | `Kioku-x.x.x-arm64.dmg` | Disk image |
 | **Linux** | `Kioku-x.x.x-x86_64.AppImage` | AppImage |
 | **Linux (Debian)** | `Kioku-x.x.x-amd64.deb` | Deb package |
 
@@ -25,12 +25,7 @@ On first launch, you may see a SmartScreen warning ("Windows protected your PC")
 
 ### macOS
 
-You may see a Gatekeeper warning ("can't be opened because Apple cannot check it for malicious software"). To open it:
-
-1. Right-click the app and select **Open**
-2. Click **Open** in the dialog
-
-Or go to **System Settings > Privacy & Security** and click **"Open Anyway"**.
+Kioku for macOS is code-signed with an Apple Developer ID and notarized by Apple, so it opens without a Gatekeeper warning. Open the downloaded `.dmg` and drag **Kioku** into your **Applications** folder, then launch it.
 
 ### Linux
 
@@ -53,6 +48,7 @@ Kioku checks for updates automatically on launch. When a new version is availabl
 
 - **Incremental reading** — Import articles from the web, read them over time, and extract key passages
 - **Spaced repetition** — FSRS-6 scheduling algorithm adapts to your memory
+- **SuperMemo Plan** — Lay out your day as a list of activities with automatic time allocation, then run it live with a countdown timer
 - **Multiple card types** — Basic (front/back), cloze deletions, image occlusion
 - **Live imports** — Load pages fresh during review for content that changes
 - **Collections** — Separate databases for different subjects or projects
