@@ -1,0 +1,55 @@
+name: Bug report
+description: Something in Kioku isn't working right
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Kioku.
+
+        The single most useful thing you can attach is the **diagnostics report**:
+        in the app, open **Settings → About → Copy diagnostics**, then paste it in
+        the Diagnostics field below. It's metadata only — app version, OS, and
+        library counts — never your notes, cards, titles, or URLs.
+
+        No GitHub account or prefer to keep it private? Email
+        kiokufeedback@gmail.com instead.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What went wrong, and what did you expect to happen instead?
+      placeholder: When I imported an Anki deck, the app…
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The steps that trigger it, if you can pin them down.
+      placeholder: |
+        1. Go to…
+        2. Click…
+        3. See…
+    validations:
+      required: false
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics
+      description: Paste the output of Settings → About → Copy diagnostics.
+      render: text
+    validations:
+      required: false
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS (Apple Silicon)
+        - macOS (Intel)
+        - Windows
+        - Linux
+        - Not sure
+    validations:
+      required: false

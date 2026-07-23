@@ -1,0 +1,19 @@
+name: Feature request
+description: Suggest an idea or improvement
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like?
+      description: The problem you're trying to solve, and the change you have in mind.
+      placeholder: It would help if Kioku could…
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else?
+      description: How you work today, alternatives you've tried, or why it matters.
+    validations:
+      required: false
