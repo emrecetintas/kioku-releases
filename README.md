@@ -1,61 +1,122 @@
 # Kioku
 
-A desktop app for spaced repetition learning with incremental reading.
+**Remember what you read.** Kioku is a desktop app for incremental reading and
+spaced repetition. Import articles and PDFs, read them a little at a time,
+turn what matters into flashcards as you go, and review each card just before
+you'd forget it.
 
-Kioku combines SuperMemo-style reading workflows with the FSRS scheduling algorithm, so you can import articles, highlight key passages, create flashcards, and review them on an optimized schedule — all offline.
+It runs on your computer, with no account, and your data stays in files you
+own. Free during the beta, for macOS, Windows and Linux.
+
+[kiokuweb.com](https://kiokuweb.com) · [Docs](https://docs.kiokuweb.com) ·
+[What's new](https://github.com/emrecetintas/kioku-releases/releases/latest)
+
+This repository holds Kioku's releases, its bug tracker and its discussions.
+The app's source code isn't public.
 
 ## Download
 
-Go to the [latest release](https://github.com/emrecetintas/kioku-releases/releases/latest) and download the installer for your platform:
+Open the [latest release](https://github.com/emrecetintas/kioku-releases/releases/latest)
+and pick the file for your computer (`<version>` is the release number, such
+as `0.6.1`):
 
-| Platform | File | Type |
-|----------|------|------|
-| **Windows** | `Kioku-x.x.x-x64.exe` | Installer |
-| **macOS** (Apple Silicon) | `Kioku-x.x.x-arm64.dmg` | Disk image |
-| **Linux** | `Kioku-x.x.x-x86_64.AppImage` | AppImage |
-| **Linux (Debian)** | `Kioku-x.x.x-amd64.deb` | Deb package |
+| Computer | File |
+| --- | --- |
+| Mac with Apple silicon (M1 or later) | `Kioku-<version>-mac-arm64.dmg` |
+| Mac with an Intel processor | `Kioku-<version>-mac-x64.dmg` |
+| Windows (64-bit) | `Kioku-<version>-x64.exe` |
+| Linux, any distribution | `Kioku-<version>-x86_64.AppImage` |
+| Debian, Ubuntu and their relatives | `Kioku-<version>-amd64.deb` |
 
-Portable `.zip` versions are also available for Windows and macOS.
+`.zip` versions are there too, for macOS (`Kioku-<version>-mac-arm64.zip`,
+`Kioku-<version>-mac-x64.zip`) and Windows (`Kioku-<version>-x64.zip`).
+Not sure which Mac you have? Apple menu → **About This Mac**: "Apple M…" means
+Apple silicon, "Intel" means Intel.
 
-## Installation Notes
+## Installing
 
-### Windows
+**macOS.** Open the `.dmg` and drag **Kioku** into **Applications**, then open
+it from there.
 
-On first launch, you may see a SmartScreen warning ("Windows protected your PC"). This is because the app is not yet code-signed. Click **"More info"** then **"Run anyway"**. This only happens once.
+**Windows.** Run the installer. Windows may say **"Windows protected your
+PC"**, because it doesn't recognize Kioku yet. Choose **More info**, then
+**Run anyway**.
 
-### macOS
+**Linux.** Make the AppImage executable, then run it:
 
-Kioku for macOS is code-signed with an Apple Developer ID and notarized by Apple, so it opens without a Gatekeeper warning. Open the downloaded `.dmg` and drag **Kioku** into your **Applications** folder, then launch it.
-
-### Linux
-
-For the AppImage, make it executable first:
 ```bash
 chmod +x Kioku-*.AppImage
 ./Kioku-*.AppImage
 ```
 
-For the `.deb` package:
+Or install the `.deb`:
+
 ```bash
-sudo dpkg -i Kioku-*.deb
+sudo apt install ./Kioku-<version>-amd64.deb
 ```
 
-## Auto-Updates
+## Updates
 
-Kioku checks for updates automatically on launch. When a new version is available, you'll see a banner in the app with a download button. Updates are downloaded in the background and applied on restart.
+Kioku checks for a new version when it starts, and whenever you choose
+**Settings → About → Check for updates**. When there is one, a banner offers
+it: Kioku downloads it when you say so and installs it when you restart.
+Your collections are backed up before every update.
 
-## Features
+## What it does
 
-- **Incremental reading** — Import articles from the web, read them over time, and extract key passages
-- **Spaced repetition** — FSRS-6 scheduling algorithm adapts to your memory
-- **SuperMemo Plan** — Lay out your day as a list of activities with automatic time allocation, then run it live with a countdown timer
-- **Multiple card types** — Basic (front/back), cloze deletions, image occlusion
-- **Live imports** — Load pages fresh during review for content that changes
-- **Collections** — Separate databases for different subjects or projects
-- **Anki import** — Bring your existing decks from Anki (.apkg files)
-- **Offline-first** — All data stored locally in SQLite, no account needed
-- **Cross-platform** — Windows, macOS, and Linux
+- **Incremental reading.** Import web pages and PDFs, read them in short
+  passes, and pull out the passages that matter as extracts. Select text and
+  press **X** to extract or **Z** to make a cloze card, without leaving the
+  page. Pages can be a snapshot or stay live.
+- **Spaced repetition with FSRS-6**, for cards. Reading comes back on its own
+  priority schedule.
+- **Cards of every kind:** basic, cloze, image occlusion, and audio cloze.
+  Add pictures and sound to any card, or record your own.
+- **Import from Anki.** Bring `.apkg` decks, including Anki's default export:
+  every field from each note type's own templates, cloze **Back Extra**,
+  pictures and sound, suspended cards, and each card's progress as an
+  approximate FSRS schedule. Tags, review history and card styling stay
+  behind. Big decks import in the background.
+- **Browse** your collection as a tree, or your cards as a sortable table like
+  Anki's Browser (question, where it lives, due date, interval, lapses).
+- **An editor that keeps up:** a menu over the selection, **/** for blocks,
+  links, pasted and dropped images, and saving you can see.
+- **Your data is safe and yours.** Each collection is a local SQLite file. Kioku
+  backs it up every 30 minutes and before every update, exports everything to
+  a `.zip` in one click, and keeps deleted items in a Trash with Undo.
+- **More than one computer?** Kioku has no cloud of its own, but
+  [Syncthing](https://docs.kiokuweb.com/guides/sync-between-computers/) keeps
+  your collections in step.
+- **Plan**, optional: lay out your day as a list of activities and run it with
+  a countdown.
 
-## Feedback
+## Feedback and help
 
-Found a bug or have a feature request? Email [kiokufeedback@gmail.com](mailto:kiokufeedback@gmail.com).
+- **Found a bug?** [Open an issue](https://github.com/emrecetintas/kioku-releases/issues/new/choose).
+  In Kioku, **Settings → About → Copy diagnostics** first, and paste it in: it
+  has versions and counts, never your notes or cards.
+- **Questions and ideas:** [Discussions](https://github.com/emrecetintas/kioku-releases/discussions).
+- **No GitHub account?** Email [kiokufeedback@gmail.com](mailto:kiokufeedback@gmail.com).
+- **Beta news by email,** now and then: [sign up](https://kiokuweb.com/#beta-list).
+- **How do I…?** The [docs](https://docs.kiokuweb.com) and their
+  [FAQ](https://docs.kiokuweb.com/troubleshooting/faq/).
+
+## Supporting Kioku
+
+Kioku is free during the beta. There's an optional
+[Ko-fi tip jar](https://ko-fi.com/emrec3); nothing is locked behind it. If
+your Ko-fi support during the beta adds up to US$25 or more, Kioku 1 is yours
+for life: every 1.x version, nothing to renew, however 1.0 is sold. If 1.0
+is free, it's free for everyone.
+[Supporter terms](https://docs.kiokuweb.com/legal/supporters/).
+
+## License and privacy
+
+Kioku is proprietary software, free to use during the beta under the
+[Kioku Beta License](EULA.md). Your data is not proprietary: collections are
+local files in a documented format, export is built in, and no version of
+Kioku, free or paid, will ever gate it. If the project is ever discontinued,
+the source will be released.
+
+Usage analytics is off unless you turn it on, and never includes what you
+read or write. See the [Privacy Policy](https://docs.kiokuweb.com/legal/privacy/).
