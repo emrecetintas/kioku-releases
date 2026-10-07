@@ -50,8 +50,8 @@ with the Software remains entirely yours. The Software's export functions
 
 ## 5. Privacy and network access
 
-- **Telemetry is off by default and strictly opt-in** (Settings → Privacy &
-  analytics). When enabled, it sends anonymous, non-identifying usage signals
+- **Telemetry is off by default and strictly opt-in** (Settings → Privacy).
+  When enabled, it sends anonymous, non-identifying usage signals
   (event names, counts, durations) via TelemetryDeck. It never sends card
   content, titles, URLs, files, or personal information.
 - The Software checks github.com for updates at startup, and loads remote web
