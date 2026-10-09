@@ -103,12 +103,9 @@ Your collections are backed up before every update.
 
 ## Supporting Kioku
 
-Kioku is free during the beta. There's an optional
-[Ko-fi tip jar](https://ko-fi.com/emrec3); nothing is locked behind it. If
-your Ko-fi support during the beta adds up to US$25 or more, Kioku 1 is yours
-for life: every 1.x version, nothing to renew, however 1.0 is sold. If 1.0
-is free, it's free for everyone.
-[Supporter terms](https://docs.kiokuweb.com/legal/supporters/).
+Kioku is free during the beta, and nothing in it is locked. If it's useful to
+you, there's an optional [Ko-fi tip jar](https://ko-fi.com/emrec3); a tip buys
+nothing.
 
 ## License and privacy
 
