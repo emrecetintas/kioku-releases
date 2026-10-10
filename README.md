@@ -95,7 +95,9 @@ Your collections are backed up before every update.
 - **Found a bug?** [Open an issue](https://github.com/emrecetintas/kioku-releases/issues/new/choose).
   In Kioku, **Settings → About → Copy diagnostics** first, and paste it in: it
   has versions and counts, never your notes or cards.
-- **Questions and ideas:** [Discussions](https://github.com/emrecetintas/kioku-releases/discussions).
+- **Questions and ideas:** the [Discord](https://discord.gg/6Fe26qstTj), or
+  [Discussions](https://github.com/emrecetintas/kioku-releases/discussions).
+  On Discord, #help and #bugs need no GitHub account.
 - **No GitHub account?** Email [kiokufeedback@gmail.com](mailto:kiokufeedback@gmail.com).
 - **Beta news by email,** now and then: [sign up](https://kiokuweb.com/#beta-list).
 - **How do I…?** The [docs](https://docs.kiokuweb.com) and their
