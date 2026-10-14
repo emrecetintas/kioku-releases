@@ -57,10 +57,11 @@ sudo apt install ./Kioku-<version>-amd64.deb
 
 ## Updates
 
-Kioku checks for a new version when it starts, and whenever you choose
-**Settings → About → Check for updates**. When there is one, a banner offers
-it: Kioku downloads it when you say so and installs it when you restart.
-Your collections are backed up before every update.
+Kioku checks for a new version when it starts, every six hours while it's
+open, and whenever you choose **Settings → About → Check for updates**. When
+there is one, a banner offers it: Kioku downloads it when you say so and
+installs it when you restart or quit. When an update changes how collections
+are stored, Kioku backs them up first.
 
 ## What it does
 
@@ -82,8 +83,9 @@ Your collections are backed up before every update.
 - **An editor that keeps up:** a menu over the selection, **/** for blocks,
   links, pasted and dropped images, and saving you can see.
 - **Your data is safe and yours.** Each collection is a local SQLite file. Kioku
-  backs it up every 30 minutes and before every update, exports everything to
-  a `.zip` in one click, and keeps deleted items in a Trash with Undo.
+  backs it up every 30 minutes and before any update that changes how it's
+  stored, exports everything to a `.zip` in one click, and keeps deleted items
+  in a Trash with Undo.
 - **More than one computer?** Kioku has no cloud of its own, but
   [Syncthing](https://docs.kiokuweb.com/guides/sync-between-computers/) keeps
   your collections in step.
@@ -113,8 +115,8 @@ nothing.
 
 Kioku is proprietary software, free to use during the beta under the
 [Kioku Beta License](EULA.md). Your data is not proprietary: collections are
-local files in a documented format, export is built in, and no version of
-Kioku, free or paid, will ever gate it. If the project is ever discontinued,
+plain SQLite files any SQLite tool can read, export is built in, and no version
+of Kioku, free or paid, will ever gate it. If the project is ever discontinued,
 the source will be released.
 
 Usage analytics is off unless you turn it on, and never includes what you
